@@ -1,0 +1,35 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.terminal {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  max-width: 1200px;
+  text-align: center;
+}
+.prompt {
+  color: #fff;
+  margin-right: 0.5rem;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.prompt span {
+  color: #8c52ff;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+.terminal {
+  max-width: 310px;
+}
+
+  .prompt {
+  font-size: 20px;
+}
+}

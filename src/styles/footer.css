@@ -1,0 +1,68 @@
+body{
+margin:0;
+padding: 0;
+overflow-x:hidden;
+}
+
+
+.footer {
+  background: #000;
+  padding: 30px 0px;
+  font-family: "Play", sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center items by default */
+  overflow-x: hidden;
+}
+
+.footer .row ul li {
+  margin: 0 15px;
+  white-space: nowrap; /* prevents text wrapping weirdness */
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width: 720px) {
+  .footer .row ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .row ul li {
+    margin: 8px 0;
+  }
+
+  .footer .row a i {
+    font-size: 1.5em;
+    margin: 0 2%;
+  }
+}

@@ -1,0 +1,43 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.waypoint {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  text-align: center;
+  width: 160px;
+  position: relative;
+}
+
+.planet {
+  background: linear-gradient(145deg, #1c1c3a, #2a2d60);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  box-shadow: 0 0 25px rgba(88, 211, 255, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.planet:hover {
+  transform: scale(1.2) rotate(6deg);
+  box-shadow: 0 0 35px rgba(88, 211, 255, 0.7);
+}
+
+.planet-label h3 {
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.planet-label p {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+  margin-top: 0.3rem;
+}
+

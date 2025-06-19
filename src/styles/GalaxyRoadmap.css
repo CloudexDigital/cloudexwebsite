@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.galaxy-track-wrapper {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.galaxy-wrapper {
+  padding: 4rem 1vw;
+  margin-top: 5rem;
+}
+
+.galaxy-track-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.galaxy-track-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4rem;
+}
+
+.rocket-tracker {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  font-size: 2.5rem;
+  z-index: 10;
+  transition: transform 0.1s linear;
+  pointer-events: none;
+}
+
+.galaxy-path {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 100px;
+  width: 2000px;
+  z-index: 0;
+}
+
+.galaxy-path path {
+  fill: none;
+  stroke: rgba(88, 211, 255, 0.2);
+  stroke-width: 3px;
+  stroke-dasharray: 10;
+  stroke-linecap: round;
+  animation: dashMove 4s linear infinite;
+}
+
+@keyframes dashMove {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+.rocket-tracker {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  font-size: 2rem;
+  transition: transform 0.1s linear;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.highlight{
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  background: linear-gradient(90deg, #8c52ff, #cfa0ff, #8c52ff);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulseFlow 6s linear infinite;
+  font-style: italic;
+}
+
+.galaxy-title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #fff;
+   max-width: 700px;
+   margin-inline: auto;
+}
+
+.galaxy-text {
+  text-align: center;
+  color: #bbb;
+  max-width: 1300px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+}
+
+.text-highlight {
+  font-size: 24px;
+  font-style: italic;
+  background: linear-gradient(90deg, #915afe, #c28bf8, #8953f6);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowColor 4s linear infinite;
+}
+
+.galaxy-highlight{
+    color: #fff;
+}
+
+@keyframes flowColor {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.galaxy-track {
+  display: flex;
+  gap: 4rem;
+  padding: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
+  min-width: max-content;
+}
+
+.rocket-trail {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  width: 0;
+  height: 8px;
+  background: linear-gradient(to right, #39d9ff, transparent);
+  border-radius: 4px;
+  filter: blur(4px);
+  z-index: 1;
+  pointer-events: none;
+  transition: width 0.1s linear;
+}
+
+.waypoint {
+  scroll-snap-align: center;
+    scroll-snap-stop: always;
+  flex: 0 0 300px; /* previously 160px – gives breathing room */
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* media query */
+@media (max-width: 768px) {
+  .galaxy-wrapper {
+    padding: 3rem 2vw;
+    margin-top: 3rem;
+  }
+
+  .highlight,
+  .galaxy-title {
+    font-size: 1.6rem;
+  }
+
+  .galaxy-text {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .text-highlight {
+    font-size: 1.1rem;
+  }
+
+  .galaxy-track {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .waypoint {
+    flex: 0 0 260px;
+  }
+
+  .rocket-tracker {
+    font-size: 1.5rem;
+    top: -40px;
+  }
+
+  .rocket-trail {
+    top: -30px;
+    height: 6px;
+  }
+
+  .galaxy-path {
+    top: 20px;
+    width: 1200px;
+  }
+}
