@@ -1,0 +1,61 @@
+.thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thank-you-card {
+  background: #000;
+  border: 1px solid #ffffff6a;
+  filter: blur(80%);
+  padding: 40px 60px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.thank-you-card h1 {
+  color: #8c52ff;
+  margin-bottom: 16px;
+}
+
+.thank-you-card p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: #747474;
+}
+
+.thank-you-card button {
+  padding: 10px 24px;
+  font-size: 1rem;
+  color: white;
+  background-color: #8c52ff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.thank-you-card button:hover {
+  background-color: #1b4f72;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}

@@ -77,7 +77,7 @@ const handleFormSubmit = () => {
           <input
             type="hidden"
             name="redirectTo"
-            value="https://www.cloudexdigital.co.za"
+            value="http://localhost:5173/#/thankYou"
           />
 
           <input
