@@ -181,3 +181,14 @@ body{
     font-size: 0.95rem;
   }
 }
+
+/* Accessibility-friendly + mobile performance fix */
+@media (prefers-reduced-motion: reduce), (max-width: 480px) {
+  .card-contents::after {
+    animation: none;
+  }
+
+  .card-contents::before {
+    filter: blur(1rem);
+  }
+}

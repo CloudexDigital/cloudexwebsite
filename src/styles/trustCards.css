@@ -73,6 +73,11 @@ body{
   z-index: -2;
 }
 
+.card-content::after {
+  will-change: transform;
+}
+
+
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -123,8 +128,23 @@ body{
     border-radius: 8px;
   }
 
-  .card-content::before {
-    inset: -30px;
-    filter: blur(3rem);
+    .card-content::before {
+    filter: blur(1rem);
+  }
+
+    .card-content::after {
+    animation: none;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-content::after {
+    animation: none;
+  }
+
+  .card-content::before {
+    filter: blur(1rem);
+  }
+}
+
+
