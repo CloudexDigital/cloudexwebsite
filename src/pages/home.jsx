@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../homeStyles/home.css";
+import { Helmet } from "react-helmet";
 
 import TrustCards from "../components/trustCards";
 import SpellTerminal from "../components/spellTerminal";
@@ -13,6 +14,19 @@ import TestimonialSection from "../components/testimonials";
 import ContactForm from "../components/contactform";
 
 const Home = () => {
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (typeof gtag === "function") {
+        gtag("event", "engaged_30s", {
+          event_category: "Engagement",
+          event_label: "Time on page > 30s",
+        });
+      }
+    }, 30000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     AOS.init({
@@ -93,6 +107,41 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Cloudex Digital – Full-Stack Web Solutions</title>
+        <meta
+          name="description"
+          content="Custom websites built through your vision and design, with automation, and frontend excellence."
+        />
+        <link rel="canonical" href="https://www.cloudexdigital.co.za" />
+        <meta property="og:title" content="Cloudex Digital" />
+        <meta
+          property="og:description"
+          content="Empowering businesses through tech innovation."
+        />
+        <meta
+          property="og:image"
+          content="https://www.cloudexdigital.co.za/CloudexDigitalLoader.png"
+        />
+        <meta name="robots" content="index, follow" />
+
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cloudex Digital",
+        "url": "https://www.cloudexdigital.co.za",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@cloudexdigital.co.za",
+          "contactType": "Customer Service"
+        }
+      }
+    `}
+        </script>
+      </Helmet>
+
       <canvas id="starCanvas"></canvas>
       <div className="Hero" data-aos="fade-down">
         <div className="hero-top">
@@ -106,11 +155,15 @@ const Home = () => {
         </div>
 
         <div className="cta-buttons">
-          <a onClick={() => scrollToSection("Contact")} className="cta-quote">Get a free quote</a>
-          <a onClick={() => scrollToSection("Portfolio")} className="cta">See our work</a>
+          <a onClick={() => scrollToSection("Contact")} className="cta-quote">
+            Get a free quote
+          </a>
+          <a onClick={() => scrollToSection("Portfolio")} className="cta">
+            See our work
+          </a>
         </div>
 
-         <TrustCards />
+        <TrustCards />
 
         <GalaxyRoadmap />
 
@@ -120,7 +173,7 @@ const Home = () => {
 
         <TestimonialSection />
 
-        <ContactForm/> 
+        <ContactForm />
       </div>
     </>
   );

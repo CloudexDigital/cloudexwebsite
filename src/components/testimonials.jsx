@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../styles/testimonials.css";
+import { Helmet } from "react-helmet";
 
 const testimonials = [
   {
@@ -67,26 +68,64 @@ const TestimonialCard = ({ quote, name, title, image }) => {
 
 const TestimonialSection = () => {
   return (
-    <section className="testimonial-wrapper">
-      <div className="testimonial-header">
-        <h2>What Our Clients Say</h2>
-        <p>
-          Trusted by entrepreneurs, small business, and growth-focused teams
-        </p>
-      </div>
+    <>
+      <Helmet>
+        <title>Cloudex Digital – Full-Stack Web Solutions</title>
+        <meta
+          name="description"
+          content="Custom websites built through your vision and design, with automation, and frontend excellence."
+        />
+        <link rel="canonical" href="https://www.cloudexdigital.co.za" />
+        <meta property="og:title" content="Cloudex Digital" />
+        <meta
+          property="og:description"
+          content="Empowering businesses through tech innovation."
+        />
+        <meta
+          property="og:image"
+          content="https://www.cloudexdigital.co.za/CloudexDigitalLoader.png"
+        />
+        <meta name="robots" content="index, follow" />
 
-      <div className="testimonial-grid">
-        {testimonials.map((t, i) => (
-          <TestimonialCard
-            key={i}
-            name={t.name}
-            title={t.title}
-            quote={t.quote}
-            image={t.image}
-          />
-        ))}
-      </div>
-    </section>
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cloudex Digital",
+        "url": "https://www.cloudexdigital.co.za",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@cloudexdigital.co.za",
+          "contactType": "Customer Service"
+        }
+      }
+    `}
+        </script>
+      </Helmet>
+
+    
+      <section className="testimonial-wrapper">
+        <div className="testimonial-header">
+          <h2>What Our Clients Say</h2>
+          <p>
+            Trusted by entrepreneurs, small business, and growth-focused teams
+          </p>
+        </div>
+
+        <div className="testimonial-grid">
+          {testimonials.map((t, i) => (
+            <TestimonialCard
+              key={i}
+              name={t.name}
+              title={t.title}
+              quote={t.quote}
+              image={t.image}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

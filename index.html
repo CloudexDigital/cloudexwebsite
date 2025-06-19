@@ -1,7 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q2XBRQTRN3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Q2XBRQTRN3");
+    </script>
+
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🌐 SEO fallback -->
+    <title>Cloudex Digital | Web Development & Business Automation</title>
+    <meta
+      name="description"
+      content="Cloudex Digital specializes in custom websites, CRM systems, and business process automation—crafted to elevate your digital presence."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.cloudexdigital.co.za/" />
+
+    <!-- 🖼️ Open Graph fallback -->
+    <meta property="og:title" content="Cloudex Digital" />
+    <meta
+      property="og:description"
+      content="Empowering businesses through full-stack innovation and beautiful web experiences."
+    />
+    <meta
+      property="og:image"
+      content="https://www.cloudexdigital.co.za/CloudexDigitalLoader.png"
+    />
+    <meta property="og:url" content="https://www.cloudexdigital.co.za/" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cloudex Digital" />
+    <meta
+      name="twitter:description"
+      content="Beautiful, business-driven websites built to scale."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.cloudexdigital.co.za/social-share.png"
+    />
+
+    <!-- 📱 Icons -->
     <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon" />
     <link
       rel="apple-touch-icon"
@@ -21,9 +71,11 @@
       href="favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="favicon_io/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cloudex Digital | Web development</title>
+
+    <!-- 🔍 Optional: Google site verification -->
+    <!-- <meta name="google-site-verification" content="your-verification-code-here" /> -->
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
