@@ -77,13 +77,13 @@ const handleFormSubmit = () => {
           <input
             type="hidden"
             name="redirectTo"
-            value="http://localhost:5173/#/thankYou"
+            value="http://www.cloudexdigital.co.za/#/thankYou"
           />
 
           <input
             type="hidden"
             name="subject"
-            value="Contact submission from CloudEx Digital"
+            value="Contact submission from Cloudex Digital"
           />
 
           <input type="hidden" name="replyTo" value="email" />

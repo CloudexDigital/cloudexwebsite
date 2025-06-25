@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <>
       <Helmet>
-        <title>CloudEx Digital – Full-Stack Web Solutions</title>
+        <title>Cloudex Digital – Full-Stack Web Solutions</title>
         <meta
           name="description"
           content="Custom websites built through your vision and design, with automation, and frontend excellence."
@@ -55,10 +55,10 @@ const Footer = () => {
           data-aos-easing="ease-in-out"
         >
           <div className="row">
-            <a href="#">
+            <a href="https://www.facebook.com/cloudexdigital25/">
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="#">
+            {/* <a href="#">
               <i className="fab fa-instagram"></i>
             </a>
             <a href="#">
@@ -66,7 +66,7 @@ const Footer = () => {
             </a>
             <a href="#">
               <i className="fab fa-linkedin"></i>
-            </a>
+            </a> */}
           </div>
 
           <div className="row">

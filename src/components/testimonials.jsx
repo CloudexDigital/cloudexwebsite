@@ -3,32 +3,33 @@ import "../styles/testimonials.css";
 import { Helmet } from "react-helmet";
 
 const testimonials = [
-  {
-    name: "Ryan M.",
-    title: "CEO, Tarrow Holdings",
-    quote:
-      "Cloudex brought clarity and speed to our data platform—our internal dashboard loads 5x faster now.",
-    image: "clients/TH-Logo(white).jpeg",
-  },
-  {
-    name: "Tiana P.",
-    title: "CEO, Rowtar Holdings",
-    quote:
-      "The mobile experience overhaul by Cloudex immediately boosted conversions. They felt like a true tech partner.",
-    image: "clients/RowtarLogo.png",
-  },
-  {
-    name: "Ryan M.",
-    title: "CEO, AquaMoov",
-    quote:
-      "From Figma to final deploy, Cloudex kept us looped in and delivered pixel perfection—on time, and on budget.",
-    image: "clients/AquaMoovlogo.png",
-  },
+ {
+  name: "Ryan M.",
+  title: "CEO, Tarrow Holdings",
+  quote:
+    "We came to Cloudex with a sluggish landing page, and they didn’t just fix it—they transformed it. The speed improvement alone (5x faster!) has made a noticeable difference for our team. They were sharp, responsive, and truly understood what we needed.",
+  image: "clients/TH-Logo(white).jpeg",
+},
+{
+  name: "Tiana P.",
+  title: "CEO, Rowtar Holdings",
+  quote:
+    "I was honestly blown away by how quickly Cloudex grasped our vision. The mobile redesign not only looked better—it started converting better almost immediately. It never felt like an outsourced job; they felt like part of our team from day one.",
+  image: "clients/RowtarLogo.png",
+},
+{
+  name: "Ryan M.",
+  title: "CEO, AquaMoov",
+  quote:
+    "Working with Cloudex was effortless. They took our Figma files and brought them to life with precision, care, and attention to detail. We were kept in the loop the whole way, and they hit every milestone—on time, on budget, and with zero stress on our side.",
+  image: "clients/AquaMoovlogo.png",
+},
+
   {
     name: "Clandy N.",
     title: "CEO, Hive-Consulting",
     quote:
-      "From Figma to final deploy, Cloudex kept us looped in and delivered pixel perfection—on time, and on budget.",
+      "Working with Cloudex was seamless from start to finish. They transformed our Figma designs into a flawless live product, staying true to every pixel. What impressed us most was their clear communication, timely delivery, and staying right on budget. We couldn’t have asked for a better development partner.",
     image: "clients/HiveLogo.svg",
   },
 ];
